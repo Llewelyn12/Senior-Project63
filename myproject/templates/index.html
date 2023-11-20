@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Sans+Thai:wght@400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            ระบบแสดงผลตำแหน่งที่นั่งว่างในโรงอาหาร <br>
+            คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร
+            <img src="{% static 'images/direction.png'%}" alt="direction" width="100" height="100" class="img">
+        </h1>
+        <div class="container">
+            <h4 class="topleft">สีเขียว = โต๊ะว่าง</h4>
+            <h4 class="topright">สีแดง = โต๊ะไม่ว่าง</h4>
+        </div>
+    </div>
+    <div id="seats-container">
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+:root {
+	/* Colors */
+	--dark-blue: #20212c;
+	--dark-blue-80: #333547;
+	--highlight: #32746d;
+	--seat-neutral: #f5f5f5;
+	--seat-selected: #63e5f3;
+	--seat-booked: #ffffffee;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--seat-neutral);
+}
+
+#seats-container {
+    display: grid;
+    grid-template-columns: repeat(8, 110px);
+    grid-template-rows: repeat(6, 110px);
+}
+
+.seat {
+    height: 100px;
+    width: 100px;
+    border-radius: 4%;
+}
+
+.header {
+    font-family:'Noto Sans Thai', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topleft {
+    color: green;
+}
+
+.topright {
+    color: red;
+}
+
+.img {
+    position: absolute;
+    top: 17%;
+    right: 100px;
+}
+
+
