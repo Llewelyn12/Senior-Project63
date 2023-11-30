@@ -33,5 +33,4 @@ seatsobjArr.forEach(seat => {
 });
 
 
-
 console.log(seatsobjArr)
