@@ -8,7 +8,7 @@ Subsequently, the obtained results are sent and displayed on a web application c
 - ``` py -3 -m venv .venv```
 - ``` .venv\Scripts\activate```
 #### Install Flask Framework
-``` pip install Flask ```
+- ``` pip install Flask ```
 #### Install OpenCV & Yolov8
 - ```pip install opencv-python```
 - ```pip install ultralytics ```
