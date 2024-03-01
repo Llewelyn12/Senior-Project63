@@ -4,10 +4,12 @@ The system has been developed using OpenCV in conjunction with YOLOv8 for automa
 Subsequently, the obtained results are sent and displayed on a web application created using the Flask framework.
 
 # Installation
-### Create Python Environment 
+#### Create Python Environment 
  ``` py -3 -m venv .venv ```
+ avtivate environment
 ``` .venv\Scripts\activate ```
-### Install Flask Framework
+#### Install Flask Framework
 ``` pip install Flask ```
-4. pip install opencv-python
-5. pip install ultralytics
+#### Install OpenCV & Yolov8
+- ``` pip install opencv-python```
+- ``` pip install ultralytics ```
