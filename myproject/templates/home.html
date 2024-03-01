@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Sans+Thai:wght@400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ url_for ('static', filename='images/table.png') }}">
+</head>
+
+<body>
+    <header style="color: white;">
+        AUTOMATIC SEAT VACANCY MONITORING SYSTEM CASE STUDY: FACULTY OF ENGINEERING CAFETERIA
+    </header>
+    <div class="main">
+        <aside class="left">
+            <span style="text-transform: uppercase; font-weight: 500;">Percentage of table status</span>
+            <div>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-name">EMPTY</div>
+                        <div class="skill-bar" style="margin: 0;">
+                            <div class="skill-per1" id="emptyPercent" per="0" style="max-width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-name">OCCUPIED</div>
+                        <div class="skill-bar">
+                            <div class="skill-per2" id="occupiedPercent" per="0" style="max-width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-name">PARTIAL OCCUPIED</div>
+                        <div class="skill-bar">
+                            <div class="skill-per3" id="reservePercent" per="0" style="max-width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="message">
+                Introduce:<div id="messageDisplay" style="font-size: 16px;color: red;"></div>
+                <div class="text">
+                    <div class="containerclock">
+                        <span id="hrs">00</span>
+                        <span>:</span>
+                        <span id="min">00</span>
+                        <span>:</span>
+                        <span id="sec">00</span>
+                        <span id="session">AM</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <span style="text-transform: uppercase; font-weight: 500;">Table Status</span>
+            <div class="def">
+                <div class="circle green"></div>
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+            </div>
+            <div class="container">
+                <div class="column1">
+                    <p style="font-size: 16px;">Left side seating area</p>
+                    <div class="side" id="tablesLeft"></div>
+                </div>
+                <div class="column2">
+                    <p style="font-size: 16px;">Right side seating area</p>
+                    <div class="side" id="tablesRight"></div>
+                </div>
+            </div>
+            <div class="def2">
+                <p style="font-size: 16px;"> <span style="color: #2cc24f;">green</span> = empty</p>
+                <p style="font-size: 16px;"> <span style="color: #f5554a;">red</span> = occupied</p>
+                <p style="font-size: 16px;"> <span style="color: #f3ce5a;">yellow</span> = partial occupied</p>
+            </div>
+        </main>
+    </div>
+    <footer style="color: white;">
+        <p style="font-size: 18px;">CONTACT US</p>
+        <div class="footers">
+            <div style="display: flex; justify-content: space-between;">
+                <div style="width: 45%;">
+                    <p style="vertical-align: middle; display: inline-block;">Chaiwat Chemthong <a
+                            href="mailto:chaiwatc63@nu.ac.th"><img width="20px" height="20px"
+                                src="{{ url_for ('static', filename='images/gmail.png')}}"
+                                style="vertical-align: middle;" /></a></p>
+                </div>
+                <div style="width: 45%;">
+                    <p style="vertical-align: middle; display: inline-block;">Teeraphat Muaksang <a
+                            href="mailto:teeraphatm63@nu.ac.th"><img width="20px" height="20px"
+                                src="{{ url_for ('static', filename='images/gmail.png')}}"
+                                style="vertical-align: middle;" /></a></p>
+                </div>
+            </div>
+        </div>
+
+        <hr style="color: white;">
+        <p class="cp-text" style="font-size: 16px;">
+            © 2023 <a href="http://www.ecpe.nu.ac.th/web/"
+                style="text-decoration: none; color: rgba(0,0,0,.7); text-shadow: 0 1px rgba(255, 255, 255, 0.1);">Department
+                of Electrical and Computer Engineering Faculty of Engineering Naresuan University</a>
+        </p>
+    </footer>
+</body>
+<script src="{{ url_for ('static', filename='js/index.js') }}"></script>
+<script src="{{ url_for ('static', filename='js/time.js') }}"></script>
+</head>
+</html>

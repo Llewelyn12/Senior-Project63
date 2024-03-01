@@ -1,0 +1,269 @@
+* {
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 95vh;
+    background: whitesmoke;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Sans Thai', sans-serif;
+
+}
+
+header {
+    background: #93c1eb;
+    padding: 2em 0 2em 0;
+    border-radius: 5px;
+
+}
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+.left {
+    background: whitesmoke;
+    padding: 3em 0 3em 0;
+    flex: 1 1 100px;
+    box-shadow: 1px 4px 11px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+
+}
+
+main {
+    background: whitesmoke;
+    padding: 1em 0 1em 0;
+    flex: 5 5 150px;
+    box-shadow: 1px 4px 11px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+
+}
+
+footer {
+    background: #ebbd93;
+    padding: 1em 0 1em 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.percent {
+    position: relative;
+    max-width: 500px;
+    width: 100;
+    background: white;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+@media all and (max-width:550px) {
+    .main {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 1em 0 1em 0;
+    }
+}
+
+.skills {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+
+}
+
+.skill-name {
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skill-bar {
+    margin: 0;
+    height: 8px;
+    width: 100%;
+    background: #d5d8dc;
+    border-radius: 6px;
+    margin-top: 6px;
+}
+
+.skill-per1 {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    background: #2cc24f;
+    animation: fillBars 3s 1;
+    left: -5px;
+}
+
+.skill-per2 {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    background: #f5554a;
+    animation: fillBars 3s 1;
+    left: -5px;
+}
+
+.skill-per3 {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    background: #f3ce5a;
+    animation: fillBars 3s 1;
+    left: -5px;
+}
+
+
+.skill-per1::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #d5d8dc;
+    border-radius: 4px;
+    font-size: 12px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per1::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #2cc24f;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 5px;
+}
+
+.skill-per2::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #d5d8dc;
+    border-radius: 4px;
+    font-size: 12px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per2::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f5554a;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 5px;
+}
+
+.skill-per3::before {
+    content: attr(per);
+    position: absolute;
+    padding: 2px 6px;
+    background: #d5d8dc;
+    border-radius: 4px;
+    font-size: 12px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per3::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f3ce5a;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 5px;
+}
+
+@keyframes fillBars {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.green {
+    width: 50px;
+    height: 50px;
+    background-color: #2cc24f;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.red {
+    width: 50px;
+    height: 50px;
+    background-color: #f5554a;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.yellow {
+    width: 50px;
+    height: 50px;
+    background-color: #f3ce5a;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+
+.row {
+    margin-bottom: 2px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.column2 {
+    @media (max-width: 768px) {
+        order: 2;
+    }
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.def2>p {
+    display: inline-block;
+}
